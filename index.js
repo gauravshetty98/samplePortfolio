@@ -43,7 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       const experienceItem = toggle.closest(".experience__item");
+      const expandedSection = experienceItem.querySelector(".experience__item-more");
+
+      // Toggle the expanded class
       experienceItem.classList.toggle("expanded");
+
+      if (experienceItem.classList.contains("expanded")) {
+        // Dynamically calculate height and set it
+        const expandedHeight = expandedSection.scrollHeight; // Full height of the content
+        expandedSection.style.height = `${expandedHeight}px`; // Apply full height
+      } else {
+        // Collapse the section
+        expandedSection.style.height = "0";
+      }
     });
   });
 
@@ -69,7 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
         projects.forEach((project, i) => {
           project.classList.toggle("active", i === index);
         });
+
+        // Recalculate the height of the expanded section after a project change
+        const expandedSection = dotContainer.closest(".experience__item-more");
+        const expandedHeight = expandedSection.scrollHeight;
+        expandedSection.style.height = `${expandedHeight}px`;
       });
     });
   });
 });
+
+

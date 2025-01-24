@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dopefolio</title>
+    <title>Portfolio</title>
     <meta name="description" content="Portfolio Template for Developer" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -27,7 +27,7 @@
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">John Doe</span>
+          <span class="header__logo-sub">Gaurav Shetty</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
@@ -84,12 +84,11 @@
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, My name is John Doe</h1>
+        <h1 class="heading-primary">Hey, My name is Gaurav</h1>
         <div class="home-hero__info">
           <p class="text-primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente solutions for
-            complex problems
+            I am a data science student currently pursuing my Master's in Rutgers University. This is my portfolio, you can find more details
+            about my work in the sections below.
           </p>
         </div>
         <div class="home-hero__cta">
@@ -155,8 +154,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
+            Masters in Data Science from Rutgers University | Statistics and Econmics Analyst in PGW | Solutions Architect in Reliance Jio
           </span>
         </h2>
         <div class="about__content">
@@ -165,20 +163,15 @@
             <div class="about__content-details">
               <p class="about__content-details-para">
                 Hey! It's
-                <strong>John Doe</strong>
-                and I'm a <strong> Frontend Web Developer </strong> located in
-                Los Angeles. I've done
-                <strong> remote </strong>
-                projects for agencies, consulted for startups, and collaborated
-                with talented people to create
-                <strong>digital products </strong>
-                for both business and consumer use.
+                <strong>Gaurav Shetty</strong>
+                and I'm a <strong> Data Scientist </strong> located in
+                New Jersey. I've worked as a Statistics and Economics analyst 
+                mainly focusing on predictive modeling and analysing Customer
+                data for actionable insights.
               </p>
               <p class="about__content-details-para">
-                I'm a bit of a digital product junky. Over the years, I've used
-                hundreds of web and mobile apps in different industries and
-                verticals. Feel free to
-                <strong>contact</strong> me here.
+                I have worked on various fields ranging from <strong>NLP, Computer Vision</strong> to 
+                <strong>Gen-AI</strong>. Feel free to read through my work or contact me.
               </p>
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
@@ -188,18 +181,18 @@
           <div class="about__content-skills">
             <h3 class="about__content-title">My Skills</h3>
             <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">SASS</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">Shopify</div>
-              <div class="skills__skill">Wordpress</div>
-              <div class="skills__skill">Google ADS</div>
-              <div class="skills__skill">Facebook Ads</div>
-              <div class="skills__skill">Android</div>
-              <div class="skills__skill">IOS</div>
+              <div class="skills__skill">Scikit-learn</div>
+              <div class="skills__skill">Hugging Face</div>
+              <div class="skills__skill">Tableau</div>
+              <div class="skills__skill">Spacy</div>
+              <div class="skills__skill">NLTK</div>
+              <div class="skills__skill">TensorFlow</div>
+              <div class="skills__skill">PyTorch</div>
+              <div class="skills__skill">Pandas</div>
+              <div class="skills__skill">Numpy</div>
+              <div class="skills__skill">LIME</div>
+              <div class="skills__skill">MLOps</div>
+              <div class="skills__skill">SQL</div>
             </div>
           </div>
         </div>
@@ -215,11 +208,14 @@
         </h2>
         <div class="experience__content">
           <div class="experience__item">
-            <h3 class="experience__item-title">Frontend Developer</h3>
-            <p class="experience__item-company">ABC Tech Solutions</p>
-            <p class="experience__item-dates">Jan 2022 - Present</p>
+            <h3 class="experience__item-title">Statistics And Economics Intern</h3>
+            <p class="experience__item-company">Philadelphia Gas Works</p>
+            <p class="experience__item-dates">May 2024 - Dec 2024</p>
             <p class="experience__item-desc">
-              Worked on creating responsive and user-friendly interfaces for clients across various industries.
+              I was part of the customer programs department and mostly worked on building statistical models and conducting analysis on customer and public data. 
+              My work ranged from forecasting energy burden, total monthly customers to analysing effectiveness of our campaigns, communication strategies. 
+              It involved constantly meeting with different teams, understanding the requirements, cleaning the data and providing the teams with actionable insights from the analysis. 
+              The tools used for doing this analysis was Python, SQL, Tableau and Excel. Below I have mentioned some of the projects that I led during my time in Philadelphia Gas Works.
             </p>
             <button class="experience__item-toggle">
               <span>More Details</span>
@@ -233,9 +229,17 @@
               <div class="experience__projects">
                 <!-- Project 1 -->
                 <div class="experience__project active">
-                  <h4>Project 1: Responsive E-Commerce Platform</h4>
+                  <h4>Monthly Customer Enrollment Forecasting Using Time-Series Analysis</h4>
                   <p>
-                    Built a fully responsive e-commerce platform using React, Redux, and Node.js, improving conversion rates by 40%.
+                    <ul>
+                      <li>The organization had  a different program for low-income customers which provided them with discounts and relief funds. 
+                        To budget for these discounts and relief funds, the organization wanted a model which could forecast the monthly customer enrolled in the program.</li>
+                      <li>Previous enrollment trends showed seasonality in total monthly customers for this program, which had to be taken into account by the model.</li>
+                      <li>Used time-series model Prophet to account for seasonality in the data achieving a Mean Absolute Percentage Error (MAPE) of less than 10%.</li>
+                      <li>Incorporated various factors, including potential policy changes, to ensure accurate future trend predictions.</li>
+                      <li>Final results were published in an Excel dashboard which contained interactive elements to view how the forecast changed based on policy changes.</li>
+                      <li>These projections were reviewed during monthly meetings to evaluate and optimize budget allocation for discount programs.</li>
+                    </ul>
                   </p>
                 </div>
                 <!-- Project 2 -->

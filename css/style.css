@@ -417,8 +417,8 @@ textarea {
   background-color: #fff; /* White background for individual items */
   border: 1px solid #e0e0e0; /* Light border */
   border-radius: 8px; /* Rounded corners */
-  padding: 1.5rem 2rem; /* Padding inside each item */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 2rem 3rem; /* Padding inside each item */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -428,28 +428,28 @@ textarea {
 }
 
 .experience__item-title {
-  font-size: 1.5rem; /* Larger font for the job title */
-  font-weight: 600; /* Semi-bold for emphasis */
+  font-size: 2rem; /* Larger font for the job title */
+  font-weight: 700; /* Semi-bold for emphasis */
   color: #333; /* Dark text color */
-  margin-bottom: 0.5rem; /* Space below the title */
+  margin-bottom: 1rem; /* Space below the title */
 }
 
 .experience__item-company {
-  font-size: 1.2rem; /* Slightly smaller font for the company name */
-  color: #777; /* Gray text color */
-  margin-bottom: 0.5rem; /* Space below the company name */
+  font-size: 1.5rem; /* Slightly smaller font for the company name */
+  color: #555; /* Dark Gray text color */
+  margin-bottom: 1rem; /* Space below the company name */
 }
 
 .experience__item-dates {
-  font-size: 1rem; /* Smaller font for dates */
+  font-size: 1.3rem; /* Smaller font for dates */
   font-style: italic; /* Italicized for style */
-  color: #555; /* Medium gray text color */
-  margin-bottom: 1rem; /* Space below the dates */
+  color: #666; /* Medium gray text color */
+  margin-bottom: 1.5rem; /* Space below the dates */
 }
 
 .experience__item-desc {
-  font-size: 1rem; /* Standard font size for descriptions */
-  line-height: 1.6; /* Better readability with line height */
+  font-size: 1.4rem; /* Standard font size for descriptions */
+  line-height: 1.8; /* Better readability with line height */
   color: #444; /* Dark gray for better contrast */
 }
 
@@ -481,14 +481,14 @@ textarea {
 /* Hidden Section */
 .experience__item-more {
   display: none;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
   background-color: #f3f3f3; /* Light background for expanded section */
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #444;
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.8;
+  font-size: 1.4rem;
 }
 
 /* Rotate Arrow on Expand */
@@ -497,14 +497,23 @@ textarea {
 }
 
 .experience__item.expanded .experience__item-more {
-  display: block; /* Show hidden content */
+  display: block; /* Ensure the content is shown */
+  overflow: visible; /* Prevent content from overflowing */
+  transition: max-height 0.3s ease-in-out; /* Smooth height transition */
+  max-height: none; /* Remove the restriction on height */
+  padding: 2rem; /* Add spacing inside the box */
+  background-color: #f3f3f3; /* Light background for contrast */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #444;
 }
 
 /* Scrollable Project Section */
 .experience__projects {
   position: relative;
-  overflow: hidden; /* Hide overflowing projects */
-  max-height: 150px; /* Set a fixed height for the section */
+  overflow: visible; /* Hide overflowing projects */
+  overflow-y: visible;
+  max-height: 200px; /* Set a fixed height for the section */
 }
 
 .experience__project {
@@ -513,6 +522,18 @@ textarea {
   background-color: #f9f9f9; /* Light background for projects */
   border-radius: 8px;
   transition: opacity 0.3s ease-in-out;
+}
+
+.experience__project h4 {
+  font-size: 1.8rem; /* Larger font size for project titles */
+  font-weight: 700;
+  color: #333;
+}
+
+.experience__project p {
+  font-size: 1.4rem; /* Increased font size for project descriptions */
+  color: #444;
+  line-height: 1.8; /* Improved readability */
 }
 
 .experience__project.active {
