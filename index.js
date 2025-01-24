@@ -38,57 +38,45 @@ headerLogoConatiner.addEventListener('click', () => {
 
 // New Code for Experience Section
 document.addEventListener("DOMContentLoaded", () => {
+  // Toggle "More Details" functionality
   const toggles = document.querySelectorAll(".experience__item-toggle");
 
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       const experienceItem = toggle.closest(".experience__item");
-      const expandedSection = experienceItem.querySelector(".experience__item-more");
-
-      // Toggle the expanded class
       experienceItem.classList.toggle("expanded");
-
-      if (experienceItem.classList.contains("expanded")) {
-        // Dynamically calculate height and set it
-        const expandedHeight = expandedSection.scrollHeight; // Full height of the content
-        expandedSection.style.height = `${expandedHeight}px`; // Apply full height
-      } else {
-        // Collapse the section
-        expandedSection.style.height = "0";
-      }
     });
   });
 
-  // Handle project pagination
-  const allDots = document.querySelectorAll(".experience__dots");
+  // Carousel functionality
+  const carousels = document.querySelectorAll(".experience__carousel");
 
-  allDots.forEach((dotContainer) => {
-    const dots = dotContainer.querySelectorAll(".experience__dot");
-    const projects = dotContainer.previousElementSibling.querySelectorAll(
-      ".experience__project"
-    );
+  carousels.forEach((carousel) => {
+    const slides = carousel.querySelectorAll(".experience__slide");
+    const prevButton = carousel.parentElement.querySelector(".prev");
+    const nextButton = carousel.parentElement.querySelector(".next");
+    let currentIndex = 0;
 
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        // Get the index of the clicked dot
-        const index = parseInt(dot.dataset.index);
-
-        // Update active dot
-        dots.forEach((d) => d.classList.remove("active"));
-        dot.classList.add("active");
-
-        // Update visible project
-        projects.forEach((project, i) => {
-          project.classList.toggle("active", i === index);
-        });
-
-        // Recalculate the height of the expanded section after a project change
-        const expandedSection = dotContainer.closest(".experience__item-more");
-        const expandedHeight = expandedSection.scrollHeight;
-        expandedSection.style.height = `${expandedHeight}px`;
+    const updateSlides = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentIndex);
       });
+    };
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlides();
     });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlides();
+    });
+
+    // Initialize the carousel
+    updateSlides();
   });
 });
+
 
 

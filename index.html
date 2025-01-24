@@ -226,52 +226,80 @@
               />
             </button>
             <div class="experience__item-more">
-              <div class="experience__projects">
+              <div class="experience__carousel">
                 <!-- Project 1 -->
-                <div class="experience__project active">
+                <div class="experience__slide active">
                   <h4>Monthly Customer Enrollment Forecasting Using Time-Series Analysis</h4>
-                  <p>
-                    <ul>
-                      <li>The organization had  a different program for low-income customers which provided them with discounts and relief funds. 
-                        To budget for these discounts and relief funds, the organization wanted a model which could forecast the monthly customer enrolled in the program.</li>
-                      <li>Previous enrollment trends showed seasonality in total monthly customers for this program, which had to be taken into account by the model.</li>
-                      <li>Used time-series model Prophet to account for seasonality in the data achieving a Mean Absolute Percentage Error (MAPE) of less than 10%.</li>
-                      <li>Incorporated various factors, including potential policy changes, to ensure accurate future trend predictions.</li>
-                      <li>Final results were published in an Excel dashboard which contained interactive elements to view how the forecast changed based on policy changes.</li>
-                      <li>These projections were reviewed during monthly meetings to evaluate and optimize budget allocation for discount programs.</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>To budget for the discounts given to certain programs, the organization wanted a model which could forecast the monthly customer enrolled in the program.</li>
+                    <li>Due to seasonality in historic trends, used the time-series model Prophet achieving a Mean Absolute Percentage Error (MAPE) of less than 10%.</li>
+                    <li>Final results were published in an Excel dashboard which contained interactive elements to view how the forecast changed based on policy changes.</li>
+                    <li>The model was well received by the team for its accuracy, accessibility, and ability to incorporate external factors into projections. 
+                      These projections were reviewed during monthly meetings to evaluate and optimize budget allocation for discount programs.
+                    </li>
+                  </ul>
                 </div>
                 <!-- Project 2 -->
-                <div class="experience__project">
-                  <h4>Project 2: Inventory Management System</h4>
-                  <p>
-                    Developed a cloud-based inventory management system using AWS, reducing operational costs by 20%.
-                  </p>
+                <div class="experience__slide">
+                  <h4>Analysis of Low-Income Customer Behavior</h4>
+                  <ul>
+                    <li>The company's low-income program provided benefits like relief funds and financial assistance, but many eligible customers didn't use them. 
+                      I analyzed low-income customer behavior to identify patterns and reasons for low participation.</li>
+                    <li>Analysis done over 100k customers revealed various patterns one of them being how more than 50% of our younger customers were not applying to the main relief fund.</li>
+                    <li>It also uncovered how one relief fund was being used more because of better communication strategy which helped in spreading awareness among younger customers.</li>
+                    <li>Analysis led to revamped communication strategy to include targeted outreach for younger customers. Additionally, text messages and emails were introduced to better engage this demographic.</li>
+                  </ul>
                 </div>
                 <!-- Project 3 -->
-                <div class="experience__project">
-                  <h4>Project 3: Customer Analytics Dashboard</h4>
-                  <p>
-                    Created an analytics dashboard with dynamic charts using D3.js and Chart.js, helping the marketing team track key KPIs.
-                  </p>
+                <div class="experience__slide">
+                  <h4> Energy Burden Forecasting and Analysis</h4>
+                  <ul>
+                    <li>The organization wanted to compare the energy burden between our fixed bill customers and regular customers. They also wanted an energy burden forecasting model for the different customer programs.</li>
+                    <li>Utilized publicly available property details from the city government to compare living conditions and energy usage among customers from different programs.</li>
+                    <li>Developed an interactive Tableau dashboard to visualize how the energy usage differed based on customer groups and living conditions proving customers with fixed monthly bills were using more energy.</li>
+                    <li>Dashboard also included a section to forecast monthly energy burden using historic averages and customer estimates.</li>
+                  </ul>
                 </div>
+                <!-- Project 4 -->
+                <div class="experience__slide">
+                  <h4> Survey to Explore Financial Assistance Barriers</h4>
+                  <ul>
+                    <li>Spearheaded a survey among 900 customers which looked into answering questions related to low participation rate in financial assistance programs among some customer groups</li>
+                    <li>Designed and executed a survey targeting 900 customers. Survey consisted of questions ranging from awareness of programs to effectiveness of those programs. </li>
+                    <li>Analyzed survey responses to analyze reasons behind reduced participation. Validated customer responses by merging survey responses with company data.</li>
+                    <li>The survey provided insights into the preferred communication mediums of different customer groups and identified ineffective channels. 
+                      This enabled us to enhance existing outreach methods and introduce new ones, improving overall engagement and reach</li>
+                  </ul>
+                </div>
+                <!-- Project 5 -->
+                <div class="experience__slide">
+                  <h4>Analysing the effectiveness of our recertification strategy</h4>
+                  <ul>
+                    <li>Customers in our low-income programs were required to recertify annually to remain enrolled. This process led to many customers being dropped from the program due to late recertification. 
+                      The primary objective was to analyze the recertification process by answering key questions, such as how effective it was, when customers typically recertified, and at which stage of the process the most drop-offs occurred.</li>
+                    <li>Used SQL for data preprocessing and Tableau dashboard to visualize the total number of customers present and dropping after each stage.</li>
+                    <li>Dashboard also helped in displaying future recertifications helping the company to strategize accordingly.</li>
+                    <li>The dashboard showed which stages were most effective and which stages faced the most drop outs. The predicted recertification numbers also helped in forecasting how many customers might drop off in the coming months.</li>
+                  </ul>
+                </div>
+                <!-- Project 6 -->
+                <div class="experience__slide">
+                  <h4>Survey to Explore Financial Assistance Barriers</h4>
+                  <ul>
+                    <li>Spearheaded a survey among 900 customers which looked into answering questions related to low participation rate in financial assistance programs among some customer groups</li>
+                    <li>Designed and executed a survey targeting 900 customers. Survey consisted of questions ranging from awareness of programs to effectiveness of those programs.</li>
+                    <li>Analyzed survey responses to analyze reasons behind reduced participation. Validated customer responses by merging survey responses with company data.</li>
+                    <li>The survey provided insights into the preferred communication mediums of different customer groups and identified ineffective channels. 
+                      This enabled us to enhance existing outreach methods and introduce new ones, improving overall engagement and reach.</li>
+                  </ul>
+                </div>
+
               </div>
-              <!-- Pagination Dots -->
-              <div class="experience__dots">
-                <span class="experience__dot active" data-index="0"></span>
-                <span class="experience__dot" data-index="1"></span>
-                <span class="experience__dot" data-index="2"></span>
+              <!-- Carousel Navigation -->
+              <div class="experience__nav">
+                <button class="experience__nav-btn prev">&lt;</button>
+                <button class="experience__nav-btn next">&gt;</button>
               </div>
-            </div>
-          </div>
-          <div class="experience__item">
-            <h3 class="experience__item-title">Web Developer Intern</h3>
-            <p class="experience__item-company">XYZ Innovations</p>
-            <p class="experience__item-dates">Jun 2021 - Dec 2021</p>
-            <p class="experience__item-desc">
-              Assisted in designing and developing landing pages, optimized website performance, and contributed to SEO strategies.
-            </p>
           </div>
         </div>
       </div>

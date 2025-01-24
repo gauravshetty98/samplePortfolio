@@ -489,6 +489,7 @@ textarea {
   color: #444;
   line-height: 1.8;
   font-size: 1.4rem;
+  transition: all 0.3s ease;
 }
 
 /* Rotate Arrow on Expand */
@@ -497,15 +498,18 @@ textarea {
 }
 
 .experience__item.expanded .experience__item-more {
-  display: block; /* Ensure the content is shown */
   overflow: visible; /* Prevent content from overflowing */
   transition: max-height 0.3s ease-in-out; /* Smooth height transition */
   max-height: none; /* Remove the restriction on height */
-  padding: 2rem; /* Add spacing inside the box */
-  background-color: #f3f3f3; /* Light background for contrast */
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  display: block;
+  padding: 1.5rem; /* Reduced padding */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc; /* Lighter and thinner border */
+  border-radius: 8px; /* Keep the rounded corners */
   color: #444;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  position: relative;
 }
 
 /* Scrollable Project Section */
@@ -561,6 +565,86 @@ textarea {
 .experience__dot.active {
   background-color: #007bff; /* Highlight active dot */
 }
+
+
+/* Carousel Container */
+.experience__carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* Individual Slides */
+.experience__slide {
+  min-width: 100%; /* Each slide takes full width */
+  display: none; /* Hide all slides by default */
+  flex-shrink: 0;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience__slide.active {
+  display: block; /* Show active slide */
+}
+
+/* Slide Titles */
+.experience__slide h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Slide Content */
+.experience__slide ul {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+}
+
+.experience__slide ul li {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Navigation Buttons */
+.experience__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  position: absolute; /* Position buttons relative to the dropdown window */
+  bottom: 30px; /* Place at the bottom */
+  right: 30px; /* Place at the right end */
+  gap: 0.5rem;
+}
+
+.experience__nav-btn {
+  align-items: center;
+  width: 25px; /* Smaller button size */
+  height: 25px; /* Smaller button size */
+  font-size: 1rem; /* Smaller icon size */
+  background-color: #007bff; /* Keep blue background */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.experience__nav-btn:hover {
+  background-color: #0056b3;
+}
+
 
 .project-cs-hero {
   color: #fff;
