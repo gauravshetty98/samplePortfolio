@@ -480,16 +480,47 @@ textarea {
 
 /* Hidden Section */
 .experience__item-more {
-  display: none;
-  margin-top: 1.5rem;
-  padding: 2rem;
-  background-color: #f3f3f3; /* Light background for expanded section */
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  color: #444;
-  line-height: 1.8;
-  font-size: 1.4rem;
   transition: all 0.3s ease;
+  display: none;
+  position: relative;
+  padding: 1.5rem; /* Adjust padding for even spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ccc; /* Uniform border */
+  border-radius: 8px; /* Rounded corners */
+  color: #444; /* Text color */
+  line-height: 1.8; /* Improve readability */
+  font-size: 1.4rem; /* Standard font size */
+  overflow: visible; /* Prevents visual overflow */
+  word-wrap: break-word; /* Break long words */
+  white-space: normal; /* Ensure text wraps properly */
+  max-width: 100%; /* Ensure container does not exceed boundaries */
+  box-sizing: border-box; /* Include padding and borders in size */
+  list-style: disc inside;
+}
+
+.experience__item-more ul {
+  list-style-type: disc; /* Show bullet points */
+  list-style-position: inside; /* Bullets appear inside the container */
+  margin-left: 1.5rem; /* Add indentation for bullets */
+  padding-left: 1.5rem; /* Adjust for proper alignment */
+  padding-left: 1.5rem; /* Ensure proper indentation */
+  margin: 0; /* Remove default margin */
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden; /* Prevent content overflow */
+  overflow-wrap: break-word;
+}
+
+.experience__item-more ul li {
+  display: list-item; /* Ensure the item behaves as a list item */
+  list-style-type: inherit;
+  margin-bottom: 0.8rem; /* Space between list items */
+  word-wrap: break-word; /* Ensure long text wraps */
+  font-size: 1.6rem; /* Improve readability */
+  line-height: 1.6; /* Better spacing between lines */
+  white-space: normal;
+  overflow: hidden; /* Prevent content overflow */
+  overflow-wrap: break-word;
 }
 
 /* Rotate Arrow on Expand */
@@ -579,18 +610,30 @@ textarea {
 
 /* Individual Slides */
 .experience__slide {
-  min-width: 100%; /* Each slide takes full width */
   display: none; /* Hide all slides by default */
   flex-shrink: 0;
-  padding: 2rem;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 100%; /* Ensure slide occupies full width */
+  padding: 2rem; /* Internal padding */
+  background-color: #fff; /* White background for clarity */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners for aesthetic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  word-wrap: break-word; /* Break long words to fit */
+  white-space: normal; /* Allow wrapping */
+  overflow: hidden; /* Prevent content overflow */
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box; /* Include padding/borders in width */
+  list-style: disc inside;
 }
 
 .experience__slide.active {
   display: block; /* Show active slide */
+  word-wrap: break-word; /* Break long words to fit */
+  white-space: normal; /* Allow wrapping */
+  overflow: hidden; /* Prevent content overflow */
+  overflow-wrap: break-word;
 }
 
 /* Slide Titles */
@@ -603,15 +646,31 @@ textarea {
 
 /* Slide Content */
 .experience__slide ul {
-  list-style: disc inside;
-  padding-left: 1.5rem;
+  list-style-type: disc; /* Ensure bullets are displayed */
+  list-style-position: inside; /* Bullets appear inside the container */
+  padding-left: 2rem; /* Add padding for alignment */
+  margin-left: 1.5rem; /* Add indentation for bullets */
+  margin: 0; /* Reset default margin */
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden; /* Prevent content overflow */
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box; /* Include padding/borders in width */
 }
 
 .experience__slide ul li {
+  list-style-type: inherit; /* Inherit the bullet style from the parent ul */
+  display: list-item; 
+  list-style: disc inside;
+  margin-bottom: 1rem;
   font-size: 1.6rem;
   line-height: 1.8;
-  margin-bottom: 1rem;
-  color: #555;
+  word-wrap: break-word; /* Break long words */
+  white-space: normal;   /* Allow text to wrap */
+  overflow: visible;     /* Allow text to overflow */
+  overflow-wrap: break-word; /* Handle word wrapping */
 }
 
 /* Navigation Buttons */
