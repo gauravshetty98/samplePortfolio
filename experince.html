@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Experiences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .skills {
+            margin-bottom: 40px;
+        }
+
+        .skills h2 {
+            font-size: 1.8rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .skills ul li {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .project {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 40px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            background-color: #e9ecef;
+        }
+
+        .project-details {
+            flex: 1;
+        }
+
+        .project-details h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-details p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-details .tools {
+            font-style: italic;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Professional Experiences</h1>
+        </div>
+
+        <div class="skills">
+            <h2>Skills Used:</h2>
+            <ul>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Prophet</li>
+                <li>Excel</li>
+                <li>Tableau</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <img src="placeholder.jpg" alt="Project Image Placeholder">
+            <div class="project-details">
+                <h3>Monthly Customer Enrollment Forecasting Using Time-Series Analysis</h3>
+                <p>
+                    To budget for the discounts given to certain programs, the organization wanted a model which could forecast the monthly customer enrolled in the program.
+                    Due to seasonality in historic trends, used the time-series model Prophet achieving a Mean Absolute Percentage Error (MAPE) of less than 10%.
+                </p>
+                <p>
+                    Final results were published in an Excel dashboard which contained interactive elements to view how the forecast changed based on policy changes.
+                    The model was well received by the team for its accuracy, accessibility, and ability to incorporate external factors into projections.
+                    These projections were reviewed during monthly meetings to evaluate and optimize budget allocation for discount programs.
+                </p>
+                <p class="tools">Tools and Technologies: SQL, Prophet, Python, Excel</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="placeholder.jpg" alt="Project Image Placeholder">
+            <div class="project-details">
+                <h3>Analysis of Low-Income Customer Behavior</h3>
+                <p>
+                    The company's low-income program provided benefits like relief funds and financial assistance, but many eligible customers didn't use them.
+                    I analyzed low-income customer behavior to identify patterns and reasons for low participation.
+                </p>
+                <p>
+                    Analysis done over 100k customers revealed various patterns, one of them being how more than 50% of our younger customers were not applying to the main relief fund.
+                    It also uncovered how one relief fund was being used more because of a better communication strategy which helped in spreading awareness among younger customers.
+                </p>
+                <p>
+                    Analysis led to a revamped communication strategy to include targeted outreach for younger customers. Additionally, text messages and emails were introduced to better engage this demographic.
+                </p>
+                <p class="tools">Tools and Technologies: SQL, Tableau, Python, Excel</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

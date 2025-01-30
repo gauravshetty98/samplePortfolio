@@ -136,6 +136,11 @@ textarea {
   margin: auto;
   width: 92%; }
 
+.main-container-exp {
+  max-width: 2500rem;
+  margin: auto;
+  width: 95%; }
+
 .btn {
   background: #fff;
   color: #333;
@@ -276,10 +281,20 @@ textarea {
         margin-bottom: 4rem; }
 
 .projects__row {
-  display: grid;
+  flex-direction: row-reverse;
+  gap: 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 5rem;
-  margin-bottom: 11rem; }
+  margin-bottom: 11rem;
+  min-height: 500px; /* Increased height */
+  padding: 4rem; /* More padding for better spacing */
+  display: flex;
+  align-items: center;
+}
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
@@ -291,36 +306,144 @@ textarea {
   .projects__row:last-child {
     margin-bottom: 0; }
   .projects__row-img-cont {
+    flex: 1;
+    max-width: 55%;
+    max-height: 100%; /* Ensures the image container grows */
     overflow: hidden; }
   .projects__row-img {
-    width: 100%;
     display: block;
-    object-fit: cover; }
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
   .projects__row-content {
-    padding: 2rem 0;
-    display: flex;
     justify-content: center;
+    flex: 2;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding: 3rem 0; /* Adjust padding */
+    }
     @media only screen and (max-width: 56.25em) {
       .projects__row-content {
         align-items: center; } }
     .projects__row-content-title {
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 2rem; }
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #333;}
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-title {
           font-size: 2.4rem; } }
     .projects__row-content-desc {
-      font-size: 1.8rem;
-      color: grey;
       max-width: 60rem;
-      line-height: 1.7;
-      margin-bottom: 3rem; }
+      font-size: 1.6rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      color: #666;
+    }
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
+          .projects__row-skills {
+            display: flex;
+            flex-wrap: wrap; /* Ensures the skills move to a new line if needed */
+            gap: 1rem;
+            margin-top: 1rem; /* Adds space between description and skills */
+          }
+          .projects__row-skill {
+            background-color: #e0f7fa;
+            color: #00796b;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+
+          
+/* Publications Section */
+.publications {
+  background-color: #f9f9f9;
+  padding: 6rem 2rem;
+}
+
+.publications__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+.publications__item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.publications__item-content {
+  flex: 2;
+  padding-right: 3rem;
+}
+
+.publications__item-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.publications__item-authors,
+.publications__item-journal {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.publications__item-desc {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.publications__item-img-cont {
+  flex: 1;
+  max-width: 40%;
+}
+
+.publications__item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .publications__item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .publications__item-content {
+    padding-right: 0;
+  }
+  .publications__item-img-cont {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+
+
 
 .contact {
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
@@ -403,23 +526,28 @@ textarea {
         width: 100%; } }
 
 .experience {
-  background-color: #f9f9f9; /* Light background for contrast */
-  padding: 4rem 2rem; /* Section padding */
+  background-color: #f9f9f9;
+  padding: 6rem 2rem; /* Increase vertical spacing */
 }
 
 .experience__content {
+  flex: 2; /* Take up two-thirds of the width */
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 2rem; /* Space between items */
+  flex-direction: column;
+  gap: 4rem; /* Add more spacing between items */
+  padding: 2rem;
+  max-width: 80%;
+  margin: auto; /* Center the content */
 }
 
 .experience__item {
   background-color: #fff; /* White background for individual items */
   border: 1px solid #e0e0e0; /* Light border */
   border-radius: 8px; /* Rounded corners */
-  padding: 2rem 3rem; /* Padding inside each item */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 3rem 4rem; /* Increase padding for better readability */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+  width: 100;
 }
 
 .experience__item:hover {
@@ -468,6 +596,13 @@ textarea {
   transition: color 0.3s ease;
 }
 
+.experience__item-toggle span {
+  font-size: 1.5rem; /* Increase the font size */
+  font-weight: 700; /* Optional: Make it bold */
+  color: rgba(0, 98, 185, 0.8); /* Optional: Adjust the color for better contrast */
+  line-height: 1.6; /* Improve readability with proper line spacing */
+}
+
 .experience__item-toggle:hover {
   color: #0056b3; /* Darker blue on hover */
 }
@@ -481,14 +616,8 @@ textarea {
 /* Hidden Section */
 .experience__item-more {
   transition: all 0.3s ease;
-  display: none;
   position: relative;
-  padding: 1.5rem; /* Adjust padding for even spacing */
-  background-color: #f9f9f9; /* Light background for contrast */
   border: 1px solid #ccc; /* Uniform border */
-  border-radius: 8px; /* Rounded corners */
-  color: #444; /* Text color */
-  line-height: 1.8; /* Improve readability */
   font-size: 1.4rem; /* Standard font size */
   overflow: visible; /* Prevents visual overflow */
   word-wrap: break-word; /* Break long words */
@@ -496,6 +625,15 @@ textarea {
   max-width: 100%; /* Ensure container does not exceed boundaries */
   box-sizing: border-box; /* Include padding and borders in size */
   list-style: disc inside;
+  display: none; /* Make the section fully visible */
+  max-height: none; /* Remove height restriction */
+  padding: 2rem; /* Add internal spacing */
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  color: #444;
 }
 
 .experience__item-more ul {
@@ -603,9 +741,10 @@ textarea {
   position: relative;
   display: flex;
   overflow: hidden;
-  max-width: 100%;
   height: auto;
   margin-top: 1rem;
+  max-width: 90%;
+  margin: auto;
 }
 
 /* Individual Slides */
@@ -613,7 +752,6 @@ textarea {
   display: none; /* Hide all slides by default */
   flex-shrink: 0;
   min-width: 100%; /* Ensure slide occupies full width */
-  padding: 2rem; /* Internal padding */
   background-color: #fff; /* White background for clarity */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 10px; /* Rounded corners for aesthetic */
@@ -626,6 +764,8 @@ textarea {
   overflow-x: hidden; /* Prevent horizontal overflow */
   box-sizing: border-box; /* Include padding/borders in width */
   list-style: disc inside;
+  padding: 2rem 3rem; /* Add more spacing */
+  margin: auto; /* Center align slides */
 }
 
 .experience__slide.active {
@@ -679,9 +819,9 @@ textarea {
   justify-content: center;
   margin-top: 1.5rem;
   position: absolute; /* Position buttons relative to the dropdown window */
-  bottom: 30px; /* Place at the bottom */
   right: 30px; /* Place at the right end */
-  gap: 0.5rem;
+  bottom: 10px; /* Adjust position for better visibility */
+  gap: 1rem; /* Spacing between navigation buttons */
 }
 
 .experience__nav-btn {
@@ -704,6 +844,13 @@ textarea {
   background-color: #0056b3;
 }
 
+.projects__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem; /* Space between project windows */
+  padding: 4rem;
+}
 
 .project-cs-hero {
   color: #fff;

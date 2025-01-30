@@ -1,10 +1,7 @@
-// Existing Code
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont');
 const smallMenu = document.querySelector('.header__sm-menu');
 const headerHamMenuBtn = document.querySelector('.header__main-ham-menu');
-const headerHamMenuCloseBtn = document.querySelector(
-  '.header__main-ham-menu-close'
-);
+const headerHamMenuCloseBtn = document.querySelector('.header__main-ham-menu-close');
 const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link');
 
 hamMenuBtn.addEventListener('click', () => {
@@ -43,8 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
-      const experienceItem = toggle.closest(".experience__item");
-      experienceItem.classList.toggle("expanded");
+      const experienceItemMore = toggle.nextElementSibling;
+
+      // Check if the clicked section is already open
+      const isAlreadyExpanded = experienceItemMore.style.display === "block";
+
+      // Close all sections
+      document.querySelectorAll(".experience__item-more").forEach((item) => {
+        item.style.display = "none";
+      });
+
+      // Reset all arrows
+      document.querySelectorAll(".experience__item-arrow").forEach((arrow) => {
+        arrow.style.transform = "rotate(0deg)";
+      });
+
+      // Toggle the clicked section
+      if (!isAlreadyExpanded) {
+        experienceItemMore.style.display = "block";
+        toggle.querySelector(".experience__item-arrow").style.transform = "rotate(180deg)";
+      }
     });
   });
 
@@ -77,6 +92,3 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlides();
   });
 });
-
-
-
